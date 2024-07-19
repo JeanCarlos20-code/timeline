@@ -7,11 +7,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { TimelinePrincipalComponent } from './pages/timeline-principal/timeline-principal.component';
 
 import { FormsModule } from '@angular/forms';
+import { BlockTimelineComponent } from './block-timeline/block-timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TimelinePrincipalComponent,
+    BlockTimelineComponent,
   ],
   imports: [
     BrowserModule,
