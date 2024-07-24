@@ -69,6 +69,19 @@
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+img.active {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: visible !important;
+  z-index: 9999;
+}
+
 @keyframes movedown {
   0% {
     opacity: 1;
