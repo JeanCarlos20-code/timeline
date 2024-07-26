@@ -1,5 +1,5 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component, ElementRef, Input, Renderer2, ViewChildren, QueryList } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewChildren, QueryList, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-block-timeline',
@@ -24,23 +24,19 @@ export class BlockTimelineComponent {
   @Input() title: string = '';
   @Input() text: string = '';
   @Input() arrowClass: string = '';
-  @Input() numberImageTimeline: string = '';
 
   myState = 'normal';
-  activeIndex: number | null = null;
-  indexImage: number | null = Number(this.numberImageTimeline);
+  @HostBinding('class.valid') elementClass: string;
 
   @ViewChildren('img') images: QueryList<ElementRef>;
 
   constructor(private renderer: Renderer2) { }
 
-  toggle(imageIndex: number | null): void {
-    if (this.activeIndex === imageIndex) {
-      this.activeIndex = null;
-    } else {
-      this.activeIndex = imageIndex;
-    }
+  toggle(): void {
+  }
 
-    console.log(this.indexImage)
+  blockTimelineNumber(index: number): string {
+    console.log(index)
+    return `number-image-timeline-${index}`
   }
 }
