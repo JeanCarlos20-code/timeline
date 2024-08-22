@@ -8,12 +8,16 @@ import { TimelinePrincipalComponent } from './pages/timeline-principal/timeline-
 
 import { FormsModule } from '@angular/forms';
 import { BlockTimelineComponent } from './block-timeline/block-timeline.component';
+import { BlockTimelineGenesisComponent } from './block-timeline/block-timeline-genesis/block-timeline-genesis.component';
+import { BlockTimelineExodusComponent } from './block-timeline/block-timeline-exodus/block-timeline-exodus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TimelinePrincipalComponent,
     BlockTimelineComponent,
+    BlockTimelineGenesisComponent,
+    BlockTimelineExodusComponent,
   ],
   imports: [
     BrowserModule,

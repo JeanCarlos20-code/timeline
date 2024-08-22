@@ -1,0 +1,13 @@
+<div class="container {{ containerClass }}">
+  <img class="img-circle" [ngClass]="{
+         'img-left': containerClass.includes('right-container'),
+         'img-right': containerClass.includes('left-container'),
+         'active': activeIndex === indexImage,
+         'hidden': activeIndex !== null && activeIndex !== indexImage
+       }" [src]="imgSrc" [@btnState]="myState" (click)="toggle(indexImage)">
+  <div class="text-box">
+    <h2>{{ title }}</h2>
+    <p>{{ text }}</p>
+    <span [class]="arrowClass"></span>
+  </div>
+</div>
